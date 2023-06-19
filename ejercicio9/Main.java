@@ -5,6 +5,7 @@ import ejercicio9.Auto;
 public class Main {
     static AutoCRUD cocheCRUD = new AutoCRUDImpl();
     public static void main(String[] args) {
+
         Auto coche1 = new Auto("308", "Peugeot", 4);
         Auto coche2 = new Auto("Fiesta", "Ford", 4);
         Auto coche3 = new Auto("Chronos", "Fiat", 5);
