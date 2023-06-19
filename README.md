@@ -1,2 +1,2 @@
 # OpenBootCamp
-Aqui ire subiendo los ejercicios para realizar el cursado de OpenBootcamp.
+Repositorio donde ire subiendo los ejercicios para el cursado de OpenBootcamp.
