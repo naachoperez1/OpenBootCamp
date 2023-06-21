@@ -15,6 +15,7 @@ public class MovieListCreator {
         boolean seguir = true;
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> peliculas = new ArrayList<>();
+        // Pedir al usuario que ingrese nombres de peliculas.
         while (seguir){
             System.out.print("Ingrese el nombre de la pelicula o 'exit' para salir: ");
             String pelicula = scanner.nextLine();
@@ -25,11 +26,13 @@ public class MovieListCreator {
                 peliculas.add(pelicula);
             }
         }
-
+        
+        // Crear un HashMap con los nombres de las peliculas y el orden en que fueron ingresados. (1. Batman, 2. jumanji, etc)
         Map<Integer, String> diccionario = new HashMap<>();
         for (int i = 0; i < peliculas.size(); i++){
             diccionario.put(i+1,peliculas.get(i));
         }
+        // Creamos la ruta del archivo donde se van a guardar las peliculas
         String rutaArchivo = "C:/Users/NoteBook/Downloads/peliculas.txt";
 
         try {
@@ -52,6 +55,7 @@ public class MovieListCreator {
 
             // Escribir contenido en el archivo
             FileWriter escritor = new FileWriter(archivo);
+            // BufferedWritter es para escribir en una nueva linea cada vez
             BufferedWriter bufferedWriter = new BufferedWriter(escritor);
             for (Map.Entry<Integer, String> entry : diccionario.entrySet()) {
                 Integer clave = entry.getKey();
