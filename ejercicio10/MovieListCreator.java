@@ -8,10 +8,15 @@ import java.util.*;
 
 public class MovieListCreator {
     public static void main(String[] args) {
-//
-//      MovieListCreator es un programa que le pide al usuario que ingrese nombres de peliculas,
-//      crea un archivo llamado "peliculas.txt" y las va registrando en el mismo.
+        createMovieFile("top ten peliculas");
+    }
 
+    /**
+     * Funcion que pregunta por consola al usuario por peliculas, y luego crea un archivo .txt
+     * con las mismas ordenadas alfabeticamente.
+     * @param nombreArchivo El nombre del archivo donde se guardaran las peliculas.
+     */
+    public static void createMovieFile(String nombreArchivo){
         boolean seguir = true;
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> peliculas = new ArrayList<>();
@@ -33,7 +38,7 @@ public class MovieListCreator {
             diccionario.put(i+1,peliculas.get(i));
         }
         // Creamos la ruta del archivo donde se van a guardar las peliculas
-        String rutaArchivo = "C:/Users/NoteBook/Downloads/peliculas.txt";
+        String rutaArchivo = "C:/Users/NoteBook/Downloads/" + nombreArchivo + ".txt";
 
         try {
             // Crear instancia de la clase File
